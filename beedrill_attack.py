@@ -10,15 +10,18 @@ screen.title("Beedrill Attack!")
 # Turn off screen updates for now
 screen.tracer(0)
 # Add in sprites (if available)
+piks_file = 'Pikachu/piks.gif'
+beedrill_file = 'Pikachu/bee.gif'
+
 while True:
     try:
-        screen.register_shape('piks.gif')
+        screen.register_shape(piks_file)
         break
     except:
         break
 while True:
     try:
-        screen.register_shape('bee.gif')
+        screen.register_shape(beedrill_file)
         break
     except:
         break
@@ -59,7 +62,7 @@ pika.speed(0)
 pika.left(90)
 pika.setpos(center, (bottom_border + 20) )
 try:
-    pika.shape('piks.gif')
+    pika.shape(piks_file)
 except:
     pika.color("black")
     pika.shape("circle")
@@ -94,12 +97,12 @@ for bee in beedrill:
     bee.speed(0)
     bee.setpos(x, y)
     try:
-        bee.shape('bee.gif')
+        bee.shape(beedrill_file)
     except:
         bee.shape("square")
         bee.color("red")
     bee.right(90)
-    bee.speed(10)
+    bee.speed(1)
     x += 50
 # Set remaining beedrills in a new y-ccordinate row once one hits 225 x coordinate
     if x >= right_border:
@@ -194,6 +197,7 @@ def obj_distance(a, b):
 
 # Turn on screen updates
 # Begin main game loop
+
 while True:
     screen.update()
 
