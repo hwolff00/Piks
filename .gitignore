@@ -1,2 +1,4 @@
 /Pikachu/__pycache__
 /Pikachu/.DS_Store
+*.DS_Store
+*__pycache__
